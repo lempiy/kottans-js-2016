@@ -24,12 +24,12 @@
 	<div class='full-container'>
 		<nav>
 			<section class='nav-panel'>
-				<a href="#">H</a>
+				<h2><a href="#">H</a></h2>
 				<a href="#" class='menu-button' title='Меню'></a>
 				<a href="https://habrahabr.ru/auth/login/" class="tab tab_login" id="login" title="Войти"><span class="g-icon g-icon-lock"></span></a>
 			</section>
 			<section hidden class='nav-panel-content'>
-				<h1>Разделы</h1>
+				<h2>Разделы</h2>
 				<form action="/search/" method="get">
                     <input type="text" name="q" placeholder="Поиск">
             	</form>
@@ -42,7 +42,9 @@
             		<li><a href="#">Песочница</a></li>
             	</ul>
             	<hr id='dividing-line'/>
-            	<h1>Спецпроэкты</h1>
+            </section>
+            <section>
+            	<h2>Спецпроэкты</h2>
             	<ul>
             		<li><a href="#">Соберите свой стартап</a></li>
             		<li><a href="#">Linux в Azure</a></li>
@@ -55,21 +57,21 @@
 				<div>
 					<figure>
 					   <picture class='profile-picture'>
-					      <source media="(min-width: 40em)" srcset="large.jpg 1024w, medium.jpg 640w, small.jpg 320W">
+					      <source media="(min-width: 40em)" srcset="large.jpg 1024w, medium.jpg 640w, small.jpg 320w" sizes="(min-width: 36em) 33.3vw, 100vw">
 					      <img src="medium.jpg" alt="profile-picture">
 					   </picture>
 					</figure>
 					<p>@rayproud</p>
 					<p>Пользователь</p>
 				</div>
-				<meter value="2.0" max="100" low="0">
-					<p>2.0</p>
+				<div>
+					<meter value="2.0" max="100" low="0">2.0</meter>
 					<p>Карма</p>
-				</meter>
-				<meter value="0" max="100" low="0">
-					<p>0.0</p>
+				</div>
+				<div>
+					<meter value="0" max="100" low="0">0.0</meter>
 					<p>Рейтинг</p>
-				</meter>
+				</div>
 			</header>
 			<nav class='article-nav'>
 				<ul>
@@ -82,18 +84,17 @@
 			</nav>
 			<div class='content-wrapper'>
 				<section class='article-section'>
-					<article>
+					<header class='article-header'>
 						<time datetime="2014-12-03">3 декабря 2014 в 16:57</time>
-						<header class='article-header'>
-							<h1><a href="">Разработка</a> → Десять типичных вопросов на собеседованиях на знание HTML</h1>
-						</header>
+						<h1><a href="">Разработка</a> → Десять типичных вопросов на собеседованиях на знание HTML</h1>
 						<p><a href="">HTML</a>, <a href="">Семантика</a>, <a href="">Разработка сайтов</a></p>
+					</header>
+					<article>
 
 							<!-- ТЕКСТ СТАТЬИ-->
 
 						<div class='article-tags'></div>
-					</article>
-					
+					</article>					
 				</section>
 				<section class='post-article'>
 					<div class='article-info'>
@@ -115,7 +116,7 @@
 						<div>
 							<figure>
 							   <picture class='profile-picture'>
-							      <source media="(min-width: 40em)" srcset="large.jpg 1024w, medium.jpg 640w, small.jpg 320W">
+							      <source media="(min-width: 40em)" srcset="large.jpg 1024w, medium.jpg 640w, small.jpg 320w" sizes="(min-width: 36em) 33.3vw, 100vw">
 							      <img src="medium.jpg" alt="profile-picture">
 							   </picture>
 							</figure>
@@ -132,10 +133,10 @@
 						</div>
 					</div>
 					<aside class='bottom-commercail'>
-						<img src="" alt='comercial'>
+						<img src="img.jpg" alt='comercial'>
 					</aside>
 					<aside class='most-rated'>
-						<h1>Самое читаемое</h1>
+						<h2>Самое читаемое</h2>
 						<div class='period-list'>
 							<ul>
 								<li>Сейчас</li>
@@ -144,33 +145,37 @@
 							</ul>
 						</div>
 						<div class='recent-articles'>
-							<li>Уязвимость в электронном дневнике или как украсть персональные данные 2-х миллионов пользователей</li>
-							<li>Почему стоит нанимать джуниоров</li>
-							<li>Что браузеры делают с вашим JavaScript-кодом: об оптимизациях в JS-движках на примере V8</li>
+							<ul>
+								<li>Уязвимость в электронном дневнике или как украсть персональные данные 2-х миллионов пользователей</li>
+								<li>Почему стоит нанимать джуниоров</li>
+								<li>Что браузеры делают с вашим JavaScript-кодом: об оптимизациях в JS-движках на примере V8</li>
+							</ul>
 						</div>
 					</aside>
 				</section>
 				<aside>
-					<img src="" alt='commertial-banner'>
+					<img src="comer.jpeg" alt='commertial-banner'>
 					<div class='habs-list'>
-						<h1>Хабы</h1>
-						<li>Программирование</li>
-						<li>Разработка сайтов</li>
-						<li>JavaScript</li>
-						<li>Алгоритмы</li>
+						<ul>
+							<li>Хабы</li>
+							<li>Программирование</li>
+							<li>Разработка сайтов</li>
+							<li>JavaScript</li>
+							<li>Алгоритмы</li>
+						</ul>
 					</div>
 				</aside>
 			</div>
 			<div class='comments-wrapper'>
 				<section>
-					<h1>Комментарии</h1>					
-					<article class='comment' id='comment #841231'>Флуд 1</article>
-					<article class='comment' id='comment #841232'>Флуд 2</article>
-					<article class='comment' id='comment #841233'>Мнение 1</article>
-					<article class='comment' id='comment #841234'>Мнение 2</article>
+					<h2>Комментарии</h2>					
+					<article class='comment' id='#841231'><h3>Флуд 1</h3></article>
+					<article class='comment' id='#841232'><h3>Флуд 2</h3></article>
+					<article class='comment' id='#841233'><h3>Мнение 1</h3></article>
+					<article class='comment' id='#841234'><h3>Мнение 2</h3></article>
 				</section>
 				<aside>
-					<h1>Что обсуждают</h1>
+					<h2>Что обсуждают</h2>
 					<ul>
 						<li>сейчас</li>
 						<li>Вчера</li>
@@ -183,7 +188,7 @@
 			</div>
 			<div class='interest-wrapper'>
 				<aside>
-					<h1>Интересные публикации</h1>
+					<h2>Интересные публикации</h2>
 					<ul>
 						<li>1</li>
 						<li>2</li>
@@ -191,43 +196,45 @@
 					</ul>
 				</aside>
 				<aside>
-					<img src="" alt='commercial'>
+					<img src="com.jpeg" alt='commercial'>
 				</aside>
 			</div>
 			<footer>
-				<ul>
-					<li>Войти</li>
-					<li>Регистрация</li>
-				</ul>
-				<dl>
-					<dt>Разделы</dt>
-					<dd>Публикации</dd>
-					<dd>Хабы</dd>
-					<dd>...</dd>
-				</dl>
-				<dl>
-					<dt>Инфо</dt>
-					<dd>О сайте</dd>
-					<dd>Правила</dd>
-					<dd>...</dd>
-				</dl>
-				<dl>
-					<dt>Разное</dt>
-					<dd>Приложения</dd>
-					<dd>Тест-драйв</dd>
-					<dd>...</dd>
-				</dl>
+				<section class='bottom-list'>
+					<ul>
+						<li>Войти</li>
+						<li>Регистрация</li>
+					</ul>
+					<ul>
+						<li>Разделы</li>
+						<li>Публикации</li>
+						<li>Хабы</li>
+						<li>...</li>
+					</ul>
+					<ul>
+						<li>Инфо</li>
+						<li>О сайте</li>
+						<li>Правила</li>
+						<li>...</li>
+					</ul>
+					<ul>
+						<li>Разное</li>
+						<li>Приложения</li>
+						<li>Тест-драйв</li>
+						<li>...</li>
+					</ul>
+				</section>
 				<section class='copyright'>
 					<ul>
 						<li>&copy; TM</li>
 						<li>Служба поддержки</li>
 						<li>Моб. Версия</li>
-						<address>
-							<button>Twitter</button>
-							<button>FB</button>
-							<button>VK</button>
-						</address>
 					</ul>
+				<address>
+					<button>Twitter</button>
+					<button>FB</button>
+					<button>VK</button>
+				</address>
 				</section>
 			</footer>
 		</div>
