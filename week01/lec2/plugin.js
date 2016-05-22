@@ -1,5 +1,7 @@
 'use strict'
 
+const PostHTML = require('posthtml')
+
 const bootstrap =
 `.navbar
 .caret
@@ -350,12 +352,12 @@ const bootstrap =
 .visible-print
 .hidden-print`
 
-const arrayOfBootstrap = bootstrap.split('\n.');
-const PostHTML = require('posthtml')
+const arrayOfBootstrap = new Set(bootstrap.split(/\.([\w\d\-]+)\n?/));
+
 const html = 
-` <div class='js-yo koko hidden hidden-xs'>
+` <div class='js-yo koko dodo hidden hidden-xs'>
 	<div class='js-wrapper text-hide kozyavka'>
-		<p id='item-231' class='js-hidden'>Lil</p>
+		<p id='item-231' class='js-hid'>Lil</p>
 	</div>
 	<em class='js-yo js-hey sam'>Hello, World!</em>
   </div>
@@ -365,29 +367,27 @@ const plugin = tree => tree
 	.match({ attrs: {class: true} }, node => 
 	{
 		let arrayOfClasses = node.attrs.class.split(' ');
-		let nodeClasses = '';
-		let jsData = '';
-		arrayOfClasses.forEach(function(item) {
-			if(arrayOfBootstrap.indexOf(item) < 0) {
-				if(item.startsWith('js-')) {
-					if(jsData.length > 0) {
-						jsData += ' ' + item.replace('js-', '')
-					} else {
-						jsData += item.replace('js-', '')
-					}
-				} else {
-					if(nodeClasses.length > 0) {
-						nodeClasses += ' ' + item
-					} else {
-						nodeClasses += item
-					}
-				}
+
+		let dataJs = arrayOfClasses.filter(function(item){
+			if(item.startsWith('js-')) {
+				return item
 			}
-			
 		})
+		dataJs = dataJs.map(function(item){
+			return item.replace('js-', '')
+		})
+
+		let classes = arrayOfClasses.filter(function(item){
+			if((!arrayOfBootstrap.has(item))&&(!item.startsWith('js-'))) {
+				return item
+			}
+		})
+
 		node.attrs['class'] = false;
-		if(jsData) node.attrs['data-js'] = jsData;
-		if(nodeClasses) node.attrs['class'] = nodeClasses;
+
+		if(dataJs.length > 0) node.attrs['data-js'] = dataJs.join(' ');
+		if(classes.length > 0) node.attrs['class'] = classes.join(' ');
+
 		return node
 	})
 PostHTML([plugin])
@@ -398,5 +398,5 @@ PostHTML([plugin])
 	})
 String.prototype.startsWith = function(letters)
 {
-    return(this.indexOf(letters) == 0);
+	return(this.indexOf(letters) == 0);
 };
