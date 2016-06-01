@@ -1,0 +1,241 @@
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<title>Form</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class='container'>
+		<header class='top-nav'>
+			<a class='top-button button-back' href='#'><i class="fa fa-long-arrow-left button-symbol" aria-hidden="true"></i> GO BACK</a>
+			<img src="img/logo.png" alt='Logo'>
+			<a class='top-button button-sign' href='#'><i class="fa fa-user button-symbol" aria-hidden="true"></i> SIGN IN</a>
+		</header>
+		<main>
+			<form class='main-form'>
+				<section class='form-header'>
+					<section class='order-header'>
+						<div class='order-header-wrapper'>
+							<h2 class='top-subheading'><i class="fa fa-clipboard order-symbol" aria-hidden="true"></i>Your order</h2>
+							<table>
+								<tr>
+									<th>Items
+									<th>Details
+									<th>Price
+									<th>Delivery
+								<tr>
+									<td>2 documents
+									<td>2 languages
+									<td value='USD:696.00'>$ 696.00
+									<td>48 hours*
+							</table>
+						</div>
+						<div class='order-button-wrapper'>
+							<input type='submit' value='Place Order' class='order-button place-order-button submit-button' disabled/>
+							<button onclick='event.preventDefault()' class='order-button print-quote-button'>Print a quote</button>
+						</div>
+					</section>
+					<section class='help-header'>
+						<h2 class='top-subheading help-heading'><i class="fa fa-life-ring order-symbol" aria-hidden="true"></i>Help center</h2>
+						<p class='text-hint'>If you need assistanch while placing your order, contact one of our beloved Project Manager by phone or email.</p>
+						<address class='address-block'>
+							<a href="tel:+971(0)555 555">+971(0)555 555</a>
+							<a href="mailto:help@qtest.com">help@qtest.com</a>
+						</address>
+					</section>
+				</section>
+				<section class='select-what'>
+					<h1 class='header-what'>Select what you want to translate</h1>
+					<hr>
+					<fieldset class='select-feild'>
+						<label class="select-type ">
+							<input required hidden type="radio" name="var" value="website"/>
+							<div class='select-wrapper'>
+								<img src="img/website.jpg" class='select-img'>
+							</div>
+						</label>
+						<label class="select-type">
+							<input required hidden checked type="radio" name="var" value="document"/>
+							<div class='select-wrapper'>
+								<img src="img/document.jpg" class='select-img'>
+							</div>
+						</label>
+						<label class="select-type">
+							<input required hidden type="radio" name="var" value="social"/>
+							<div class='select-wrapper'>
+								<img src="img/social.jpg" class='select-img'>
+							</div>
+						</label>
+					</fieldset>
+				</section>
+				<section class='upload-files'>
+					<h2 class='header-section'>Upload your documents <dfn class='upload-hint'>(Doc, Docx, Text, Pdf, Markdown)</dfn></h2>
+					<button onclick='event.preventDefault()' class='file-upload'><i class="fa fa-cloud-upload inline" aria-hidden="true"></i>Upload a new file<input type="file" class='upload-hidden' pseudo=""></button>
+					<fieldset class='upload-table'>
+						<table>
+							<tr>
+								<th>File name
+								<th class='table-collapse-size'>File size
+								<th class='table-collapse-words'>Number of words
+								<th>Remove
+							<tr>
+								<td><i class="fa fa-file-text file-symbol" aria-hidden="true"></i>some_file.docx
+								<td class='table-collapse-size'>78kb
+								<td value='words:842' class='table-collapse-words'>842
+								<td><button onclick='event.preventDefault()' class='delete-file'><i class="fa fa-trash file-symbol" aria-hidden="true"></i></button>
+							<tr>
+								<td><i class="fa fa-file-text file-symbol" aria-hidden="true"></i>some_file.docx
+								<td class='table-collapse-size'>78kb
+								<td value='words:842' class='table-collapse-words'>842
+								<td><button onclick='event.preventDefault()' class='delete-file'><i class="fa fa-trash file-symbol" aria-hidden="true"></i></button>
+						</table>
+					</fieldset>
+				</section>
+				<section class='lang-select'>
+					<h2 class='header-section'>Choose your languages pairs</h2>
+					<div class='lang-from-wrapper'>
+						<label class='label-lang-from'>From
+							<select name='select-lang-from' class='select-form'>
+								<option>English</option>
+								<option>Franch</option>
+								<option>Greek</option>
+								<option>Latin</option>
+								<option>Elven</option>
+								<option>Gnomish</option>
+								<option>Valyrian</option>
+							</select>
+						</label>
+					</div>
+					<div class='lang-to-wrapper'>
+						<label class='label-lang-from'>To
+							<select name='select-lang-from' class='select-form'>
+								<option>English</option>
+								<option>Franch</option>
+								<option>Greek</option>
+								<option>Latin</option>
+								<option>Elven</option>
+								<option>Gnomish</option>
+								<option>Valyrian</option>
+							</select>
+						</label>
+						<label class='label-lang-from additional-lang'>
+							<select name='select-lang-from' class='select-form'>
+								<option>English</option>
+								<option>Franch</option>
+								<option>Greek</option>
+								<option>Latin</option>
+								<option>Elven</option>
+								<option>Gnomish</option>
+								<option>Valyrian</option>
+							</select>
+							<button onclick='event.preventDefault()' class='delete-file delete-lang'><i class="fa fa-trash file-symbol" aria-hidden="true"></i></button>
+						</label>
+						<button onclick='event.preventDefault()' class='add-lang-button'><i class="fa fa-plus file-symbol" aria-hidden="true"></i> add</button>
+					</div>
+				</section>
+				<section class='double-section'>
+					<section class='chose-tone'>
+						<h2 class='header-section halfheader'>Select your desired tone</h2>
+						<fieldset class='tone-feild'>
+							<label class="select-tone">
+								<input required hidden type="radio" name="tone" value="casual"/>
+								<div class='tone-wrapper'><i class="fa fa-comments-o file-symbol" aria-hidden="true"></i>Friendly / Casual</div>
+							</label>
+							<label class="select-tone">
+								<input required hidden checked type="radio" name="tone" value="corporate"/>
+								<div class='tone-wrapper'><i class="fa fa-suitcase file-symbol" aria-hidden="true"></i></i>Corporate / Pro</div>
+							</label>
+							<label class="select-tone">
+								<input required hidden type="radio" name="tone" value="media"/>
+								<div class='tone-wrapper'><i class="fa fa-newspaper-o file-symbol" aria-hidden="true"></i></i>Media / Format</div>
+							</label>
+						</fieldset>
+					</section>
+					<section class='urgent'>
+						<h2 class='header-section halfheader'>Tell us how urgent this job is</h2>
+						<div class='urgent-wrapper'>
+							<input required type="range" name="urgent" class='urgent urgent-input position0' min='0' max='100' step='25' value="50"/>
+							<div class='urgent-label-wrapper'>
+								<label for='urgent' class="range-label range-first-label">I got time</label>
+								<label for='urgent' class="range-label range-second-label actived">Average</label>
+								<label for='urgent' class="range-label range-third-label">Yesterday</label>
+							</div>		
+							<legend for='urgent' class='urgent-hint'>
+								<h3 class='urgent-hint-header'>Timeline Info</h3>
+								<p class='urgent-hint-text'>With an <em class='emphesized-hint'>avarage</em> timeline setup, our expert translator can take a reasonable amount of time perfecting your translating</p>
+							</legend>
+						</div>
+					</section>
+				</section>
+				<section class='info-payment'>
+					<h2 class='header-section'>Sign up and choose a payment method</h2>
+					<h4 class='sign-text'>Already have an account with us? <a href="#">Sign in.</a></h4>
+					<label for='username' class='input-text-label name-label'>Full Name
+						<input required type="text" name="username" class='username' pattern='^[A-Za-z\s.-]+$' placeholder='Enter your full name'/>
+					</label>
+					<div class='auth-info-wrapper'>
+						<label for='email' class='input-text-label email-label'>Email Adress
+							<input required type="text" name="email" class='email' pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$' placeholder='example@gmail.com'/>
+						</label>
+						<label for='password' class='pass-label input-text-label'>Choose a Password
+							<input required type="password" name="pass" class='pass' pattern='^(?=.*\d)(?=.*[a-z])\w{6,}$'/>
+						</label>
+					</div>
+					<fieldset class='credit-feild'>
+						<label class="credit-type">
+							<input required hidden checked type="radio" name="credit" value="visa-mc"/>
+							<div class='credit-wrapper'><img src="./img/visamc.png"></div>
+						</label>
+						<label class="credit-type">
+							<input required hidden type="radio" name="credit" value="paypal"/>
+							<div class='credit-wrapper'><img src="./img/paypal.png"></div>
+						</label>
+						<label class="credit-type">
+							<input required hidden type="radio" name="credit" value="amazon"/>
+							<div class='credit-wrapper'><img src="./img/mamzon.png"></div>
+						</label>
+					</fieldset>
+					<label for='card-number' class='input-text-label card-text label-card-number'>Card Number
+						<input required type="text" name="card-number" placeholder='XXXX XXXX XXXX XXXX' maxlength="19" class='card-number'/>
+					</label>
+					<label for='card-date' class='input-text-label card-text label-card-date'>Expiry Date
+						<input required placeholder='DD/MM/YY' maxlength="8" type="text" pattern="^((0?[13578]|10|12)(-|\/)(([1-9])|(0[1-9])|([12])([0-9]?)|(3[01]?))(-|\/)((19)([2-9])(\d{1})|(20)([01])(\d{1})|([8901])(\d{1}))|(0?[2469]|11)(-|\/)(([1-9])|(0[1-9])|([12])([0-9]?)|(3[0]?))(-|\/)((19)([2-9])(\d{1})|(20)([01])(\d{1})|([8901])(\d{1})))$" name="card-date" class='card-date'/>
+					</label>
+					<label for='card-date' class='input-text-label card-text label-card-code'>Code
+						<input required type="text" name="card-date" maxlength="3" pattern="[0-9]{3}" placeholder='xxx' class='card-code'/>
+					</label>
+				</section>
+				<div class='main-button-wrapper'>
+					<button onclick='event.preventDefault()' class='order-button print-quote-button submit-main'>Print a quote</button>
+					<input type='submit' value='Place Order' class='order-button place-order-button submit-button submit-main' disabled/>
+					<p>I agree to <a href="#">Terms &amp; Conditions</a></p>
+					<input required type='checkbox' class='check-terms'/>				
+				</div>
+			</form>
+		</main>
+	</div>
+	<footer class='main-footer'>
+		<aside class='what-we-do'>
+			<h2><i class="fa fa-heart-o footer-symbol" aria-hidden="true"></i>What we do</h2>
+			<p class='italic'>We provide a full range of language services including content development, document, website and social accounts translations</p>
+		</aside>
+		<address class='what-we-do'>
+			<h2><i class="fa fa-compass footer-symbol" aria-hidden="true"></i></i>Our Main Office</h2>
+			<p>Dubai, UAE<br>P.O. Box: 502735<br>Phone:+971(0)44278128</p>
+		</address>
+		<address class='what-we-do social-address'>
+			<h2><i class="fa fa-link footer-symbol" aria-hidden="true"></i></i>Connect with us</h2>
+			<ul class='social-contacts'>
+				<li><a href="#"><i class="fa fa-facebook-square social-symbol" aria-hidden="true"></i>Facebook</a>
+				<li><a href="#"><i class="fa fa-twitter-square social-symbol" aria-hidden="true"></i>Twitter</a>
+				<li><a href="#"><i class="fa fa-linkedin-square social-symbol" aria-hidden="true"></i>LinkedIn</a>
+			</ul>
+		</address>
+		<aside class='what-we-do dark-logo'>
+			<a href="#"><img src="./img/dark-logo.png"></a>
+		</aside>
+	</footer>
+	<script src='./js/index.js'></script>
+</body>
+</html>
