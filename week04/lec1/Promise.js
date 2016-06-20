@@ -184,7 +184,7 @@ class MyPromise extends Promise
 				}
 			}
 
-			//if last item wasn't a promise
+			//if last item wasn't a Promise
 			if(result.length > num) {
 				result.length = 2
 				resolve(result)
