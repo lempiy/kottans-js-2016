@@ -1,0 +1,17 @@
+{
+  "name": "my-kata",
+  "version": "1.0.0",
+  "main": ".week05/lec1/add.js",
+  "scripts": {
+    "test": "mocha -w .week05/lec1/test"
+  },
+  "dependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon": "*"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
